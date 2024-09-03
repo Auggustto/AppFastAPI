@@ -8,17 +8,17 @@ services:
     networks:
       - my_network_nginx
 
-  nginx:
-    image: nginx
-    container_name: nginx
-    networks:
-      - my_network_nginx
-    ports:
-      - "80:80"
-    volumes:
-      - /var/lib/jenkins/workspace/AppFastAPI/nginx.conf:/etc/nginx/nginx.conf
+  # nginx:
+  #   image: nginx
+  #   container_name: nginx
+  #   networks:
+  #     - my_network_nginx
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - /var/lib/jenkins/workspace/AppFastAPI/nginx.conf:/etc/nginx/nginx.conf
       # - /etc/localtime:/etc/localtime:ro
 
-networks:
-  my_network_nginx:
-    external: true
+# networks:
+#   my_network_nginx:
+#     external: true
