@@ -32,20 +32,6 @@ pipeline {
                 }
             }
         }
-
-        // Executa os testes dentro do container
-        // stage('Run tests') {
-        //     steps {
-        //         sh 'docker-compose -f $DOCKER_COMPOSE_FILE run test'
-        //     }
-        // }
-
-        // Derruba os containers e limpa os recursos
-        // stage('Stop and Clean Up') {
-        //     steps {
-        //         sh 'docker-compose -f $DOCKER_COMPOSE_FILE down --volumes --remove-orphans'
-        //     }
-        // }
     }
     
     // Garante que os containers serão derrubados mesmo em caso de falha
