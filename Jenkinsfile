@@ -24,10 +24,12 @@ pipeline {
             }
         }
 
-        stage("Remove volume") {
-            sh 'docker-compose -f $DOCKER_COMPOSE_FILE down --volumes --remove-orphans'
+        stage('Remove volume') {
+            steps {
+                script {
+                    sh 'docker-compose -f $DOCKER_COMPOSE_FILE down --volumes --remove-orphans'
+            }
         }
-        
 
         // Construindo as imagens e subindo os containers
         stage('Build and Start Containers') {
