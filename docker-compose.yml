@@ -16,7 +16,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ~/nginx.conf:/etc/nginx/nginx.conf:rw
+      # - ~/nginx.conf:/etc/nginx/nginx.conf:rw
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/localtime
 
 networks:
   my_network_nginx:
