@@ -28,6 +28,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker-compose -f $DOCKER_COMPOSE_FILE down --volumes --remove-orphans'
+                }
             }
         }
 
