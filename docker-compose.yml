@@ -15,8 +15,8 @@ services:
       - my_network_nginx
     ports:
       - "80:80"
-    # volumes:
-    #   - ./nginx.conf:/etc/nginx/nginx.conf:rw
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:rw
 
 networks:
   my_network_nginx:
